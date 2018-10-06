@@ -25,8 +25,7 @@ class App extends Component {
       <ThemeProvider theme={colorsDark}>
         <div>
           <Wrapper>
-            <Title>// Hacker News Reader</Title>
-            <List stories={stories} />
+            <Title>Hacker News Reader</Title>
             <InfiniteScroll
               dataLength={stories.length}
               next={this.fetchStories}
