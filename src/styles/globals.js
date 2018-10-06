@@ -1,20 +1,33 @@
 import { injectGlobal } from 'styled-components';
+import { colorsDark } from './palette';
 
 const setGlobalStyles = () =>
   injectGlobal`
-      body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    * {
+      box-sizing: border-box;
     }
 
-    code {
-      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    html, body {
+      font-family: Lato,Helvetica-Neue,Helvetica,Arial,sans-serif;
+      width: 100vw;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: ${colorsDark.background};
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:visited {
+        color: inherit;
+      }
     }
   `;
 
